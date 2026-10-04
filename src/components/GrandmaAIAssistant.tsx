@@ -12,6 +12,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { Recipe, AIMessage } from '../types';
+import { askGrandmaCulinaryAI } from '../services/aiService';
 
 interface GrandmaAIAssistantProps {
   isOpen: boolean;
@@ -84,29 +85,20 @@ export const GrandmaAIAssistant: React.FC<GrandmaAIAssistantProps> = ({
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/grandma-ai', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt,
-          recipeContext: activeRecipeContext ? {
-            title: activeRecipeContext.title,
-            originCountry: activeRecipeContext.originCountry,
-            ingredients: activeRecipeContext.ingredients,
-            instructions: activeRecipeContext.instructions,
-          } : null,
-        }),
+      const reply = await askGrandmaCulinaryAI({
+        prompt,
+        recipeContext: activeRecipeContext ? {
+          title: activeRecipeContext.title,
+          originCountry: activeRecipeContext.originCountry,
+          ingredients: activeRecipeContext.ingredients,
+          instructions: activeRecipeContext.instructions,
+        } : null,
       });
 
-      if (!response.ok) {
-        throw new Error(`Server status ${response.status}`);
-      }
-
-      const data = await response.json();
       const grandmaMsg: AIMessage = {
         id: (Date.now() + 1).toString(),
         sender: 'grandma',
-        text: data.reply || "Bless your heart, my dear! I'm stirring the sauce right now—ask me once more!",
+        text: reply,
         timestamp: 'Just now',
       };
       setMessages((prev) => [...prev, grandmaMsg]);

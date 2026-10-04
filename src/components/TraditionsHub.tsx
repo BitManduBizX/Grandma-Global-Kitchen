@@ -91,6 +91,10 @@ export const TraditionsHub: React.FC<TraditionsHubProps> = ({ onOpenDishByName }
                   <img
                     src={tradition.image}
                     alt={tradition.title}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80';
+                    }}
                     className="w-20 h-20 rounded-xl object-cover shrink-0"
                   />
                   <div className="flex-1 space-y-1">
@@ -120,6 +124,10 @@ export const TraditionsHub: React.FC<TraditionsHubProps> = ({ onOpenDishByName }
               <img
                 src={selectedTradition.image}
                 alt={selectedTradition.title}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80';
+                }}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

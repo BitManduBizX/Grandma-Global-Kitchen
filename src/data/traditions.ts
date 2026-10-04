@@ -33,7 +33,7 @@ export const FOOD_TRADITIONS: FoodTradition[] = [
     region: "Global (Korea, Eastern Europe, Japan, Nordic)",
     continent: "Europe",
     readTimeMinutes: 7,
-    image: "https://images.unsplash.com/photo-1583032015879-5836480e0fa3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80",
     summary: "Long before refrigeration or artificial preservatives, our grandmothers partnered with microscopic wild yeasts and lactobacillus bacteria to turn seasonal gluts of cabbage, milk, and soybeans into nutritional powerhouses.",
     fullStory: [
       "Before modern supermarkets made fresh strawberries available in December, winter was a real threat. In the sub-zero chill of the Korean peninsula, November was known as Gimjang season—a collaborative neighborhood festival where families harvested mountains of Napa cabbage, salted them in sea brine, and layered them with red pepper, garlic, and wild fermented shrimp.",
@@ -57,7 +57,7 @@ export const FOOD_TRADITIONS: FoodTradition[] = [
     region: "Senegal, Nigeria, Ghana, Cameroon",
     continent: "Africa",
     readTimeMinutes: 5,
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80",
     summary: "The origins of Jollof trace back to the Wolof Empire of Senegal (where it was known as thiéboudienne), migrating across West African borders into a beloved culinary symbol of celebration, homecoming, and community solidarity.",
     fullStory: [
       "No Sunday celebration, traditional wedding, or milestone anniversary in West Africa is complete without Jollof. While the famous 'Jollof Wars' between Nigeria and Ghana provide endless lighthearted rivalry across social media, the dish's roots belong to the Wolof people of ancient Senegambia, where fishermen cooked broken jasmine rice in caramelized tomato stew with local sea fish.",
