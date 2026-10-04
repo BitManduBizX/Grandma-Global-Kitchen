@@ -1,0 +1,6 @@
+{
+  "name": "Grandma's Global Kitchen",
+  "description": "The World's Recipe Book — Homemade, Cozy, & Connected. Authentic global culinary heritage, pantry-based recipe matching, cultural traditions, and culinary wisdom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
